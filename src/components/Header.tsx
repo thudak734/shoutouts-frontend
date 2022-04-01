@@ -1,6 +1,6 @@
 import { signInWithGoogle, signOut } from "../firebaseConfig";
 import { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import "./Header.css";
 
@@ -8,7 +8,7 @@ const Header = () => {
   //we need to know about context to add the login stuff.
   const { user } = useContext(AuthContext);
 
-  const name: string | undefined = useParams().name;
+  // const name: string | undefined = useParams().name;
   //if user is truthy we want to show the sign out button. else,
   return (
     <header className="Header">
