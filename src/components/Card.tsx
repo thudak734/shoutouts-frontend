@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import AuthContext from "../context/AuthContext";
 import Item from "../models/Item";
 import "./Card.css";
 
@@ -16,7 +14,7 @@ const Card = ({ shoutoutItem, onDeleteShoutout }: Props) => {
       <Link to={`user/${shoutoutItem.to}`}>
         <p>To: {shoutoutItem.to}</p>
       </Link>
-      <img src={shoutoutItem.avatar} alt="image" />
+      <img src={shoutoutItem.avatar} alt="avatar" />
       <p>
         From:
         {shoutoutItem.from}
